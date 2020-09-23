@@ -1,12 +1,10 @@
 PROCEDURE Dot_Product(v1: ARRAY_OF INTEGER,v2: ARRAY_OF INTEGER)
 VAR
     scalar : INTEGER :=0;
-    i ,j: INTEGER ; 
+    i : INTEGER ; 
 BEGIN
     FOR i FROM 0 TO v1.length-1 STEP 1  DO
-        FOR j FROM 0 TO v2.length-1 STEP 1 DO
-            scalar := scalar+(v1[i]*v2[j])
-        END_FOR
+            scalar := scalar+(v1[i]*v2[i])
     END_FOR
     IF (scalar==0) THEN
         Write(" the two vectors are orthogonals");
