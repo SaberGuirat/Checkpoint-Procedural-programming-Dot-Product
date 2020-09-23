@@ -4,7 +4,7 @@ VAR
     i : INTEGER ; 
 BEGIN
     FOR i FROM 0 TO v1.length-1 STEP 1  DO
-            scalar := scalar+(v1[i]*v2[i])
+        scalar := scalar+(v1[i]*v2[i])
     END_FOR
     IF (scalar==0) THEN
         Write(" the two vectors are orthogonals");
