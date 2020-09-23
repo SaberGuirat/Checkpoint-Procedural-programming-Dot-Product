@@ -1,0 +1,33 @@
+PROCEDURE Dot_Product(v1: ARRAY_OF INTEGER[3],v2: ARRAY_OF INTEGER[3])
+VAR
+    scalar : INTEGER :=0;
+    i ,j: INTEGER ; 
+BEGIN
+    FOR i FROM 0 TO 2 STEP 1  DO
+        FOR j FROM 0 TO 2 STEP 1 DO
+            scalar := scalar+(v1[i]*v2[j])
+        END_FOR
+    END_FOR
+    IF (scalar==0) THEN
+        Write(" the two vectors are orthogonals");
+    ELSE
+        Write("the two vectors are not orthogonals ")
+    END_IF
+END
+
+ALGORITHM Chekpoint
+VAR
+    u1 : ARRAY_OF INTEGER[3] ;
+    u2 : ARRAY_OF INTEGER[3] ; 
+    i  : INTEGER;
+BEGIN
+    FOR i FROM 0 TO 2 STEP 1 DO // input vector u1 (x,y,z)
+        Write("u1[",i,"]= ");
+        Read(u1[i]);
+    END_FOR
+    FOR i FROM 0 TO 2 STEP 1  DO// input vector u2 (x,y,z)
+        Write("u2[",i,"]= ");
+        Read(u2[i]);
+    END_FOR
+    Dot_Product(u1,u2); // call the procedure Dot_Product to determine if u1 and u2 orthogonals or not
+END
