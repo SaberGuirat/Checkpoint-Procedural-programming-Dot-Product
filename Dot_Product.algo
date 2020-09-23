@@ -1,10 +1,10 @@
-PROCEDURE Dot_Product(v1: ARRAY_OF INTEGER[3],v2: ARRAY_OF INTEGER[3])
+PROCEDURE Dot_Product(v1: ARRAY_OF INTEGER,v2: ARRAY_OF INTEGER)
 VAR
     scalar : INTEGER :=0;
     i ,j: INTEGER ; 
 BEGIN
-    FOR i FROM 0 TO 2 STEP 1  DO
-        FOR j FROM 0 TO 2 STEP 1 DO
+    FOR i FROM 0 TO v1.length STEP 1  DO
+        FOR j FROM 0 TO v2.length STEP 1 DO
             scalar := scalar+(v1[i]*v2[j])
         END_FOR
     END_FOR
